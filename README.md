@@ -1,5 +1,8 @@
 #to do for cpt200
 
+btw guys i don't know markdown lol
+
+
 assigned team()
 	create team roster
 		jeff schultze - project manager
