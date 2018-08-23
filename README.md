@@ -2,6 +2,8 @@
 
 btw guys i don't know markdown lol
 
+new update
+
 
 assigned team()
 	create team roster
