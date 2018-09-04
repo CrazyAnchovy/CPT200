@@ -43,9 +43,8 @@ possible_list = link_soup.find_all('ul', class_ = 'ingredient-list')
 print(possible_list)
 print('****')
 
-for item in possible_list:
-    print(item.text)
 
+print(type(possible_list))
 
 
 

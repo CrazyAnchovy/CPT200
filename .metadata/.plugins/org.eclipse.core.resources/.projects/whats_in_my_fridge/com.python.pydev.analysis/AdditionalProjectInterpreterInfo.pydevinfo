@@ -1,21 +1,30 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\Bowen\Desktop\coding\cpt200\.metadata\.plugins\org.eclipse.core.resources\.projects\whats_in_my_fridge\com.python.pydev.analysis\v2_indexcache
-scrape_testing.__init__|1535230305906374000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
+scrape_testing.__init__|1536032870184238000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
+scrape_testing.cleaner|1536032847816680000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\cleaner.py
 -- END DISKCACHE
 -- START DICTIONARY
-1
+4
+4=Recipe.__init__
+3=Recipe
 1=scrape_testing.__init__
+2=scrape_testing.cleaner
 -- END DICTIONARY
 -- START TREE 1
-6
+7
 con|0|
-lin|3|link_list!11@link_soup!11@link_source!11@
+lin|4|link_list!11@link_soup!11@link_list!19@link_source!11@
 num|1|number!11@
 pos|1|possible_list!11@
 pre|1|pretty_soup!11@
-rec|1|recipe_links!11@
+rec|3|recipe_links!11@Recipe!17@recipe_links!19@
+ref|1|Refrigerator!17@
 -- END TREE
 -- START TREE 2
-0
+4
+__i|1|__init__!3&18@
+dir|1|directions!4&19@
+ing|1|ingredients!4&19@
+nam|1|name!4&19@
 -- END TREE
