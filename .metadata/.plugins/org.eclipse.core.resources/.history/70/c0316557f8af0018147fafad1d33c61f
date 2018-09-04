@@ -43,18 +43,13 @@ possible_list = link_soup.find_all('ul', class_ = 'ingredient-list')
 print(possible_list)
 print('****')
 
-recipe_title = link_soup.find('h1')
-
-print(recipe_title.text)
+# for item in possible_list:
+#     print(item.text)
 
 for item in possible_list:
-    print(item.text)
-    
-recipe_directions = link_soup.find('h4', class_ = 'expanded')
-print(recipe_directions)
-
-
-
+    thing = item.find('li', class_ = 'qty')
+    print(thing)
+    print(thing)
     
 
 

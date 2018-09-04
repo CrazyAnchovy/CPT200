@@ -51,7 +51,7 @@ for item in possible_list:
     print(item.text)
     
 recipe_directions = link_soup.find('h4', class_ = 'expanded')
-print(recipe_directions)
+print(recipe_directions.text)
 
 
 
