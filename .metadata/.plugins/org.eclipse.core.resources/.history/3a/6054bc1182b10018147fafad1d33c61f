@@ -14,7 +14,6 @@ for link in recipe_links:
 
 #define classes
 class Refrigerator:
-    """Refrigerator will be the current ingredients owned by the end user"""
     pass
 
 class Recipe:
