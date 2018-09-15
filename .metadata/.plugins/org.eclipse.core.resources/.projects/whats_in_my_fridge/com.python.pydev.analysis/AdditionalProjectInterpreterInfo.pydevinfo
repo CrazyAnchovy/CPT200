@@ -1,32 +1,37 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\Users\Bowen\Desktop\coding\cpt200\.metadata\.plugins\org.eclipse.core.resources\.projects\whats_in_my_fridge\com.python.pydev.analysis\v2_indexcache
-scrape_testing.__init__|1536202673832574000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
+scrape_testing.__init__|1536869635184438000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
+scrape_testing.practice_db|1536866010608233000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py
+scrape_testing.cleaner|1536871526853742000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\cleaner.py
+scrape_testing.saved_cleaner|1536869470554807000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\saved_cleaner.py
 -- END DISKCACHE
 -- START DICTIONARY
-1
-1=scrape_testing.__init__
+6
+6=Recipe.__init__
+5=Recipe
+3=scrape_testing.__init__
+1=scrape_testing.practice_db
+2=scrape_testing.cleaner
+4=scrape_testing.saved_cleaner
 -- END DICTIONARY
 -- START TREE 1
-13
-bet|0|
-cle|0|
-con|0|
-ing|1|ingredient_list!11@
-ite|0|
-lin|3|link_list!11@link_soup!11@link_source!11@
-num|0|
-pos|0|
-pre|0|
-rec|3|recipe_directions_soup!11@recipe_links!11@recipe_title!11@
-ref|0|
-thi|0|
-url|0|
+10
+c|1|c!11@
+con|1|conn!11@
+dir|1|directions_string!19@
+ing|6|ingredient_list!19@ing_string!27@ingredient_list!27@ingredient_string!19@ingredients!27@ingredient_list!35@
+lin|9|link_source!35@link_soup!35@link_list!27@link_soup!27@link_soup!19@link_list!19@link_source!27@link_source!19@link_list!35@
+rec|11|Recipe!33@recipe_directions_soup!35@recipe_title!35@recipe_directions_soup!27@recipe_title!19@recipe_links!27@recipe_title!27@recipe_links!19@Recipe!17@recipe_links!35@recipe_directions_soup!19@
+ref|2|Refrigerator!33@Refrigerator!17@
+sel|1|selection!11@
+str|5|string_directions!35@string_ingredients!19@string_ingredients!35@string_directions!19@string_thing!27@
+url|2|url_number!19@url_number!35@
 -- END TREE
 -- START TREE 2
 4
-__i|0|
-dir|0|
-ing|0|
-nam|0|
+__i|2|__init__!5&18@__init__!5&34@
+dir|2|directions!6&19@directions!6&35@
+ing|2|ingredients!6&35@ingredients!6&19@
+nam|2|name!6&19@name!6&35@
 -- END TREE

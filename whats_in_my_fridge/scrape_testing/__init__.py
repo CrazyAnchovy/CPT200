@@ -2,6 +2,7 @@ import bs4 as bs
 import urllib.request
 
 link_list = [] 
+ingredients = []
 
 with open ('recipe_link_file.txt') as link_file:
     recipe_links = link_file.read().split(',')
@@ -21,6 +22,21 @@ print(recipe_title.text)
 
 for item in ingredient_list:
     print(item.text)
+    string_thing = (str(item.text))
+    ingredients.append(string_thing)
+    
+ing_string = (''.join(ingredients))
+
+print("**")
+
+print('this is the ing_string')
+print(ing_string)
+
+
+
+
+
+    
 
 recipe_directions_soup = link_soup.find('div', class_ = 'directions-inner container-xs')
 
