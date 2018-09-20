@@ -6,7 +6,7 @@ import sqlite3
 import time
 
 #namespace
-url_number = 12077
+url_number = 4001
 link_list = []
 string_ingredients = []
 string_directions = []
@@ -69,7 +69,7 @@ for link in link_list:
     directions_string = ''.join(string_directions)
     
     c.execute("INSERT INTO recipe_table VALUES ('recipe_title_string', 'ingredient_string', 'directions_string')")
-    #time.sleep(.5)
+    time.sleep(.5)
     url_number+=1
     print(url_number)
     conn.commit()
