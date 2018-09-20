@@ -1,5 +1,4 @@
 
-#bbrune5369@msn.com would like a copy of this program when 'finished' Ginger
 
 import bs4 as bs
 import urllib.request
@@ -7,7 +6,7 @@ import sqlite3
 import time
 
 #namespace
-url_number = 20090
+url_number = 12077
 link_list = []
 string_ingredients = []
 string_directions = []
