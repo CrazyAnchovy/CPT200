@@ -2,3 +2,9 @@ Write-Up for recipe_db.db
 https://github.com/CrazyAnchovy/CPT200/blob/master/whats_in_my_fridge/scrape_testing/recipe_db.db
 
 recipe_db.db has 20089 records at the time of writing 9/21/2018. Each record has three columns: name, ingredients and directions. Each cell is a string object.
+
+Searching the database will consist of finding an ingredient included in an ingredient column's string. For instance, when prompted to enter an ingredient, and a user enters 'chicken' the software will present each recipe where the word 'chicken' is included in the ingredients.
+
+Into the GUI, one will enter one or more ingredients they have, and will be presented with several recipes.
+
+fuck

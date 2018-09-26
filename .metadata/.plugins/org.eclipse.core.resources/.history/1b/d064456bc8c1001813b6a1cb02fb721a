@@ -50,7 +50,7 @@ for link in link_list:
     link_soup = bs.BeautifulSoup(link_source, 'lxml')
     
     recipe_title = link_soup.find('h1')
-    print(recipe_title.text)
+    #print(recipe_title.text)
     recipe_title_string = recipe_title.text
     
     ingredient_list = link_soup.find_all('ul', class_ = 'ingredient-list')
