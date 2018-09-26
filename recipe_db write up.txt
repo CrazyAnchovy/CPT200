@@ -1,0 +1,4 @@
+Write-Up for recipe_db.db 
+https://github.com/CrazyAnchovy/CPT200/blob/master/whats_in_my_fridge/scrape_testing/recipe_db.db
+
+recipe_db.db has 20089 records at the time of writing 9/21/2018. Each record has three columns: name, ingredients and directions. Each cell is a string object.

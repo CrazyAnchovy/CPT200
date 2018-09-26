@@ -7,7 +7,7 @@ import sqlite3
 import time
 
 #namespace
-url_number = 20090
+url_number = 20070
 link_list = []
 string_ingredients = []
 string_directions = []
@@ -17,11 +17,11 @@ directions_string = ""
 #make the sqlite3 db comment out the following after db is created
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
-# c.execute("""CREATE TABLE recipe_table(
-#             name text,
-#             ingredients text,
-#             directions text
-#         )""")
+c.execute("""CREATE TABLE recipe_table(
+            name TEXT,
+            ingredients TEXT,
+            directions TEXT
+        )""")
 
 
 #soup prep, getting the urls
@@ -46,6 +46,7 @@ class Recipe:
 
 #create database of recipes
 for link in link_list:
+    conn.cursor()
     link_source = urllib.request.urlopen(link_list[url_number]).read()
     link_soup = bs.BeautifulSoup(link_source, 'lxml')
     
@@ -69,7 +70,8 @@ for link in link_list:
         #print(item.get_text())
     directions_string = ''.join(string_directions)
     
-    c.execute("INSERT INTO recipe_table VALUES ('recipe_title_string', 'ingredient_string', 'directions_string')")
+    c= conn.cursor()
+    c.execute("INSERT INTO recipe_table VALUES (?,?,?)", (recipe_title_string, ingredient_string, directions_string))
     #time.sleep(.5)
     url_number+=1
     print(url_number)

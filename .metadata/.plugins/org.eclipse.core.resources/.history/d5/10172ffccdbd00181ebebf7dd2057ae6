@@ -1,0 +1,12 @@
+import sqlite3
+#import sqlalchemy
+
+
+
+
+conn = sqlite3.connect("recipe_db.db")
+c = conn.cursor()
+
+chicken_getter = c.execute("SELECT * FROM 'recipe_table' WHERE 'ingredients' like 'chicken' ")
+
+print(type(chicken_getter.name))
