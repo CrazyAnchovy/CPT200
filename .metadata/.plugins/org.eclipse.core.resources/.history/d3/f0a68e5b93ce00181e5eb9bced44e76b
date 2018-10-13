@@ -1,0 +1,89 @@
+import tkinter
+
+'''
+Welcome to CrazyAnchovy's python musings.
+8/7/2016
+I'm just going to try and make a window appear.
+...I ended up copying this down to study from. ??? I really know nothing right now.
+Just making windows over and over again, trying to learn how to print text to a window or add
+a button or just give the window some substance...
+'''
+
+#below is code i copied (stole) to study
+class Display(tkinter.Tk):
+    def __init__(self,parent):
+        tkinter.Tk.__init__(self,parent)
+        self.parent = parent
+        self.GuiDisplay()
+
+    def GuiDisplay(self):
+
+        self.grid()
+        self.geometry("1280x720")
+        #self.overrideredirect(True) #uncomment for fullscreen
+
+        """Build the GUI"""
+
+        self.MessageDisplay = tkinter.Label(self, text = 'No messages from slaves', anchor = 'nw', justify = 'left', relief = 'ridge', font = ("Courier New", 15), bg = '#e4e7e8', fg = '#2980b9')
+        self.MessageDisplay.grid(row = 0, column = 0, columnspan = 3, sticky = 'wens', ipadx = 2, ipady = 2)
+
+        self.ClockDisplay = tkinter.Label(self, text = '00:00', relief = 'ridge', font = ("Courier New", 40), bg = '#e4e7e8', fg = '#2980b9')
+        self.ClockDisplay.grid(row = 0, column = 3, sticky = 'wens', ipadx = 2, ipady = 2)
+
+        self.Menu1Button = tkinter.Button(self, text = 'Ring', command = self.Action(Do = 'Rng'), font = ("Courier New", 20), bg = '#3498db', fg = '#e4e7e8', activebackground = '#2980b9', activeforeground = '#e4e7e8')
+        self.Menu1Button.grid(row = 1, column = 0, columnspan = 2, sticky = 'wens', padx = 2, ipadx = 4)
+
+        self.Menu2Button = tkinter.Button(self, text = 'Toggle holliday mode', command = self.Action(Do = 'SwHolDay'), font = ("Courier New", 20), bg = '#3498db', fg = '#e4e7e8', activebackground = '#2980b9', activeforeground = '#e4e7e8')
+        self.Menu2Button.grid(row = 2, column = 0, columnspan = 2, sticky = 'wens', padx = 2, ipadx = 4)
+
+        self.Menu3Button = tkinter.Button(self, text = 'Edit time', command = self.SetMenu(MenuIndex = 2), font = ("Courier New", 20), bg = '#3498db', fg = '#e4e7e8', activebackground = '#2980b9', activeforeground = '#e4e7e8')
+        self.Menu3Button.grid(row = 3, column = 0, columnspan = 2, sticky = 'wens', padx = 2, ipadx = 4)
+
+        self.Menu4Button = tkinter.Button(self, text = 'Add/Edit alarms', command = self.SetMenu(MenuIndex = 3), font = ("Courier New", 20), bg = '#3498db', fg = '#e4e7e8', activebackground = '#2980b9', activeforeground = '#e4e7e8')
+        self.Menu4Button.grid(row = 4, column = 0, columnspan = 2, sticky = 'wens', padx = 2, ipadx = 4)
+
+        self.Menu5Button = tkinter.Button(self, text = 'Shutdown', command = self.Action(Do = 'Shutdwn'), font = ("Courier New", 20), bg = '#3498db', fg = '#e4e7e8', activebackground = '#2980b9', activeforeground = '#e4e7e8')
+        self.Menu5Button.grid(row = 5, column = 0, columnspan = 2, sticky = 'wens', padx = 2, ipadx = 4)
+
+        self.MenuDescription = tkinter.Label(self, text = 'No menu selected.', anchor = 'nw', justify = 'left', relief = 'ridge', font = ("Courier New", 15), bg = '#e4e7e8', fg = '#2980b9')
+        self.MenuDescription.grid(column = 2, columnspan = 2, row = 1, rowspan = 5, sticky = 'wens', ipadx = 2, ipady = 2)
+
+        self.grid_columnconfigure(0, weight = 3)
+        self.grid_columnconfigure(1, weight = 3)
+        self.grid_columnconfigure(2, weight = 3)
+        self.grid_columnconfigure(3, weight = 1)
+        self.grid_rowconfigure(0, weight = 10)
+        self.grid_rowconfigure(1, weight = 18)
+        self.grid_rowconfigure(2, weight = 18)
+        self.grid_rowconfigure(3, weight = 18)
+        self.grid_rowconfigure(4, weight = 18)
+        self.grid_rowconfigure(5, weight = 18)
+
+    def SetMenu(self, MenuIndex):
+
+        if MenuIndex==1:
+            self.Menu1Button.configure(text = 'Ring', command = self.Action(Do = 'Rng'))
+            self.Menu2Button.configure(text = 'Toggle holliday mode', command = self.Action(Do = 'SwHolDay'))
+            self.Menu3Button.configure(text = 'Edit time', command = self.SetMenu(MenuIndex = 2))
+            self.Menu4Button.configure(text = 'Add/Edit alarms', command = self.SetMenu(MenuIndex = 3))
+            self.Menu5Button.configure(text = 'Shutdown', command = self.Action(Do = 'Shutdwn'))
+        elif MenuIndex==2:
+            self.Menu1Button.configure(text = 'Edit hours', command = self.Action(Do = 'ModH'))
+            self.Menu2Button.configure(text = 'Edit minutes', command = self.Action(Do = 'ModM'))
+            self.Menu3Button.configure(text = 'Edit seconds', command = self.Action(Do = 'ModS'))
+            self.Menu4Button.configure(text = 'Internet synchronization', command = self.Action(Do = 'Synch'))
+            self.Menu5Button.configure(text = 'Return to menu', command = self.SetMenu(MenuIndex = 1))
+        elif MenuIndex==3:
+            self.Menu1Button.configure(text = 'Edit hours', command = self.Action(Do = 'ModHA'))
+            self.Menu2Button.configure(text = 'Edit minutes', command = self.Action(Do = 'ModMA'))
+            self.Menu3Button.configure(text = 'Edit seconds', command = self.Action(Do = 'ModSA'))
+            self.Menu4Button.configure(text = 'Switch mode', command = self.Action(Do = 'ChMod'))
+            self.Menu5Button.configure(text = 'Return to menu', command = self.SetMenu(MenuIndex = 1))
+
+    def  Action(self, Do):
+        pass
+
+if __name__ == "__main__":
+        app = Display(None)
+        app.title('Web Bell')
+        app.mainloop()
