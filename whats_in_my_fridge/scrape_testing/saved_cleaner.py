@@ -1,4 +1,4 @@
-#bbrune5369@msn.com would like a copy of this program when 'finished' Ginger
+#bbrune5369@msn.com would like a copy of this program when 'finished' Ginger esmith2224@hotmail.com erica smith
 
 import bs4 as bs
 import urllib.request

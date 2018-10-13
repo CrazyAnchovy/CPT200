@@ -1,7 +1,0 @@
-import sqlite3
-
-conn = sqlite3.connect("recipe_db.db")
-c = conn.cursor()
-
-print(str(c.execute("SELECT * FROM 'recipe_table' WHERE 'ingredients' like 'chicken' ")))
-
