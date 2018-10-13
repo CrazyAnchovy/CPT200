@@ -1,0 +1,14 @@
+
+import tkinter
+from tkinter import *
+
+
+
+class gui(Frame):
+    def __init__(self):
+        Frame.__init__(self)
+        self.master.geometry("500x700")
+        self.master.title('Commission Calulator')
+        self.grid()
+
+gui().mainloop()

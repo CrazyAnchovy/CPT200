@@ -1,0 +1,12 @@
+
+import tkinter
+from tkinter import *
+
+
+
+gui = Tk()
+gui.geometry("500x700")
+gui.title("What's In My Fridge")
+gui.mainloop()
+
+

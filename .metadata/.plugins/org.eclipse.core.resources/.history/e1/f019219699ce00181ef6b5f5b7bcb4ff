@@ -1,0 +1,7 @@
+
+from tkinter import *
+
+
+gui = Tk()
+gui.geometry("370x170")
+gui.title("What's In My Fridge")
