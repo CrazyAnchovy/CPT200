@@ -1,7 +1,9 @@
 MODULES_MANAGER_V2
+beta.__init__|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\__init__.py
 scrape_testing.__init__|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
 scrape_testing.cleaner|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\cleaner.py
+scrape_testing.gui|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\gui.py
+scrape_testing.list_query|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\list_query.py
 scrape_testing.practice_db|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py
 scrape_testing.query_testing|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\query_testing.py
 scrape_testing.saved_cleaner|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\saved_cleaner.py
-scrape_testing.soundboard|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\soundboard.py
