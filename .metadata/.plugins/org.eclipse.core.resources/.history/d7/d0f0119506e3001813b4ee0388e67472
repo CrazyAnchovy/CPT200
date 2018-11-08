@@ -72,16 +72,13 @@ class gui(Frame):
         elif ingredient_counter == 5:
             recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5))
         
-        
-            
-        
-
-            
+        for recipe in recipes:
+            print(recipe[0])
         
         for recipe in recipes:
             self.information.insert('end', "****")
-            #recipe = " ".join([x for x in recipe])
-            self.information.insert('end', recipe[0])
+            recipe = " ".join([x for x in recipe])
+            self.information.insert('end', recipe)
     
     def reset(self):
         self.ingredient_counter = 0
