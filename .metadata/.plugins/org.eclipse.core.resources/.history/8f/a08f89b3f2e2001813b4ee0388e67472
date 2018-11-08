@@ -13,35 +13,31 @@ class gui(Frame):
         self.master.title('What\'s in my Fridge?')
         self.grid()
         
-        self.label_fake = Label(self, text='.')
-        self.label_fake.grid(row = 0, column = 0)
-        
-        self.label = Label(self, text='What Ingredient?')
-        self.label.grid(row = 0, column = 1)
-        
         self.enter_button = Button(self, text='Get Recipes!', command = self.get_recipes)
-        self.enter_button.grid(row=6, column=1)
-        
-        self.reset_button = Button(self, text='Reset', command = self.reset)
-        self.reset_button.grid(row=6, column=3)
+        self.enter_button.grid(row=0, column=2)
         
         self.ingredient1_entry = Entry(self)
-        self.ingredient1_entry.grid(row=1, column=1)
+        self.ingredient1_entry.grid(row=0, column=1)
         
         self.ingredient2_entry = Entry(self)
-        self.ingredient2_entry.grid(row=2, column=1)
+        self.ingredient2_entry.grid(row=1, column=1)
         
         self.ingredient3_entry = Entry(self)
-        self.ingredient3_entry.grid(row=3, column=1)
+        self.ingredient3_entry.grid(row=2, column=1)
 
         self.ingredient4_entry = Entry(self)
-        self.ingredient4_entry.grid(row=4, column=1)
+        self.ingredient4_entry.grid(row=3, column=1)
 
         self.ingredient5_entry = Entry(self)
-        self.ingredient5_entry.grid(row=5, column=1)
+        self.ingredient5_entry.grid(row=4, column=1)
+
+
+        
+        self.label = Label(self, text='What Ingredient?')
+        self.label.grid(row = 0, column = 0)
         
         self.information=Listbox(self, height=20, width=50)
-        self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
+        self.information.grid(row=0, column=4, columnspan=1, rowspan=5)
         
     def get_recipes(self):
         ingredient_counter = 0
@@ -76,19 +72,14 @@ class gui(Frame):
             self.information.insert('end', "****")
             recipe = " ".join([x for x in recipe])
             self.information.insert('end', recipe)
-    
-    def reset(self):
+        
+        
         #the next few lines to be defined as a function for 'reset'    
-        self.ingredient_counter = 0
-        self.recipes = ''
+        ingredient_counter = 0
+        recipes = ''
         for ingredient in ingredients_list:
             ingredients_list.pop()
-        self.information.delete(0,END)
-        self.ingredient1_entry.delete(0, END)
-        self.ingredient2_entry.delete(0, END)
-        self.ingredient3_entry.delete(0, END)
-        self.ingredient4_entry.delete(0, END)
-        self.ingredient5_entry.delete(0, END)
+        #self.information.delete(0,END)
 
         
 gui().mainloop()

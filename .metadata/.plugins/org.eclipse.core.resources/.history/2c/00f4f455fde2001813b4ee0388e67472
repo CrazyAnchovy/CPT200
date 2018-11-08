@@ -13,9 +13,6 @@ class gui(Frame):
         self.master.title('What\'s in my Fridge?')
         self.grid()
         
-        self.label_fake = Label(self, text='.')
-        self.label_fake.grid(row = 0, column = 0)
-        
         self.label = Label(self, text='What Ingredient?')
         self.label.grid(row = 0, column = 1)
         
@@ -84,11 +81,6 @@ class gui(Frame):
         for ingredient in ingredients_list:
             ingredients_list.pop()
         self.information.delete(0,END)
-        self.ingredient1_entry.delete(0, END)
-        self.ingredient2_entry.delete(0, END)
-        self.ingredient3_entry.delete(0, END)
-        self.ingredient4_entry.delete(0, END)
-        self.ingredient5_entry.delete(0, END)
 
         
 gui().mainloop()
