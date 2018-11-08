@@ -1,14 +1,1 @@
-INSTUPbeta.__init__
-C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\__init__.py
-INFOS:&&3|1|2|0&&3|3|2|0&&1|4|2|0&&2|5|2|4&&3|6|2|7&&3|8|2|7&&3|9|2|7&&3|10|2|7&&2|11|2|4
-ingredient1_entry=8
-conn=1
-c=3
-enter_button=6
-beta.__init__=2
-gui.__init__=7
-gui=4
-information=10
-label=9
-__init__=5
-get_recipes=11
+DELSTRbeta.beta_upgrade
