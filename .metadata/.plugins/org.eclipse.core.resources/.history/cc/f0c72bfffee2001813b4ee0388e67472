@@ -40,7 +40,7 @@ class gui(Frame):
         self.ingredient5_entry = Entry(self)
         self.ingredient5_entry.grid(row=5, column=1)
         
-        self.information=Listbox(self, height=20, width=75)
+        self.information=Listbox(self, height=20, width=50)
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
         
     def get_recipes(self):
