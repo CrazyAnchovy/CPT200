@@ -45,7 +45,7 @@ class gui(Frame):
         
     def get_recipes(self):
         
-        recipes = ()
+        self.recipes = ()
         
         self.information.delete(0, 'end')
         for ingredient in ingredients_list:
