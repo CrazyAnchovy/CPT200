@@ -1,3 +1,5 @@
+#karen@karenodrake.com would like a copy
+
 import sqlite3
 import tkinter
 from tkinter import *
