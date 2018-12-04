@@ -3,7 +3,7 @@
 C:\Users\Bowen\Desktop\coding\cpt200\.metadata\.plugins\org.eclipse.core.resources\.projects\whats_in_my_fridge\com.python.pydev.analysis\v2_indexcache
 scrape_testing.query_testing|1540349682351618000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\query_testing.py
 beta.__init__|1541614676583483000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\__init__.py
-beta.beta_upgrade|1541828853363290000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\beta_upgrade.py
+beta.beta_upgrade|1542686256447963000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\beta_upgrade.py
 scrape_testing.__init__|1536869635184438000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
 scrape_testing.list_query|1540349682267598000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\list_query.py
 scrape_testing.practice_db|1536866010608233000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py
@@ -12,16 +12,15 @@ scrape_testing.saved_cleaner|1538175667355425000|C:\Users\Bowen\Desktop\coding\c
 scrape_testing.gui|1541614676502466000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\gui.py
 -- END DISKCACHE
 -- START DICTIONARY
-15
+14
 12=Recipe.__init__
 1=scrape_testing.query_testing
 4=beta.__init__
 11=Recipe
 5=beta.beta_upgrade
-15=gui.reset
+14=gui.reset
 3=scrape_testing.practice_db
 7=scrape_testing.cleaner
-14=gui.get_recipes
 2=scrape_testing.gui
 13=gui.__init__
 8=scrape_testing.list_query
@@ -51,9 +50,9 @@ dir|2|directions!12&59@directions!12&51@
 ent|3|enter_button!13&43@enter_button!13&35@enter_button!13&19@
 get|3|get_recipes!10&34@get_recipes!10&42@get_recipes!10&18@
 inf|3|information!13&43@information!13&19@information!13&35@
-ing|11|ingredients!12&51@ingredients!12&59@ingredient4_entry!13&43@ingredient2_entry!13&43@ingredient1_entry!13&19@ingredient3_entry!13&43@ingredient1_entry!13&35@ingredient5_entry!13&43@ingredient_counter!14&43@ingredient_counter!15&43@ingredient1_entry!13&43@
+ing|10|ingredients!12&51@ingredients!12&59@ingredient4_entry!13&43@ingredient2_entry!13&43@ingredient1_entry!13&19@ingredient3_entry!13&43@ingredient1_entry!13&35@ingredient5_entry!13&43@ingredient_counter!14&43@ingredient1_entry!13&43@
 lab|4|label_fake!13&43@label!13&19@label!13&43@label!13&35@
 nam|2|name!12&59@name!12&51@
-rec|2|recipes!14&43@recipes!15&43@
+rec|1|recipes!14&43@
 res|2|reset_button!13&43@reset!10&42@
 -- END TREE

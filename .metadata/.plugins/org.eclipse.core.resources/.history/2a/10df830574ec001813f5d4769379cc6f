@@ -44,6 +44,15 @@ class gui(Frame):
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
         
     def get_recipes(self):
+        
+        
+        recipes = ()
+        
+        self.information.delete(0, 'end')
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+            
+        
         ingredient_counter = 0
         ingredient1 = self.ingredient1_entry.get()
         ingredient2 = self.ingredient2_entry.get()
@@ -77,8 +86,17 @@ class gui(Frame):
             ingredients = recipe[1]
             directions = recipe[2]
             self.information.insert('end', "****")
-            self.information.insert('end', recipe)
+            self.information.insert('end', name)
+            self.information.insert('end', ingredients)
+            self.information.insert('end', directions)
             
+        self.ingredient_counter = 0
+        self.recipes = ''
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+
+    
+    
     def reset(self):
         self.ingredient_counter = 0
         self.recipes = ''

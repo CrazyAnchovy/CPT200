@@ -44,6 +44,15 @@ class gui(Frame):
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
         
     def get_recipes(self):
+        
+        
+        recipes = ()
+        
+        self.information.delete(0, 'end')
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+            
+        
         ingredient_counter = 0
         ingredient1 = self.ingredient1_entry.get()
         ingredient2 = self.ingredient2_entry.get()
@@ -77,8 +86,70 @@ class gui(Frame):
             ingredients = recipe[1]
             directions = recipe[2]
             self.information.insert('end', "****")
-            self.information.insert('end', recipe[0])
+            self.information.insert('end', name)
+            self.information.insert('end', ingredients)
+            self.information.insert('end', directions)
             
+#         self.ingredient_counter = 0
+#         self.recipes = ''
+#         for ingredient in ingredients_list:
+#             ingredients_list.pop()
+
+
+    def get_recipes_on_return(self, event):
+        
+        
+        recipes = ()
+        
+        self.information.delete(0, 'end')
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+            
+        
+        ingredient_counter = 0
+        ingredient1 = self.ingredient1_entry.get()
+        ingredient2 = self.ingredient2_entry.get()
+        ingredient3 = self.ingredient3_entry.get()
+        ingredient4 = self.ingredient3_entry.get()
+        ingredient5 = self.ingredient3_entry.get()
+        
+        ingredients_list.append(ingredient1)
+        ingredients_list.append(ingredient2)
+        ingredients_list.append(ingredient3)
+        ingredients_list.append(ingredient4)
+        ingredients_list.append(ingredient5)
+        
+        for ingredient in ingredients_list:
+            if ingredient != '':
+                ingredient_counter += 1
+                            
+        if ingredient_counter == 1:
+            recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%'".format(ingredient1))
+        elif ingredient_counter == 2:
+            recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2))
+        elif ingredient_counter == 3:
+            recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3))
+        elif ingredient_counter == 4:
+            recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4))
+        elif ingredient_counter == 5:
+            recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5))
+        
+        for recipe in recipes:
+            name = recipe[0]
+            ingredients = recipe[1]
+            directions = recipe[2]
+            self.information.insert('end', "****")
+            self.information.insert('end', name)
+            self.information.insert('end', ingredients)
+            self.information.insert('end', directions)
+            
+#         self.ingredient_counter = 0
+#         self.recipes = ''
+#         for ingredient in ingredients_list:
+#             ingredients_list.pop()
+
+    
+    
     def reset(self):
         self.ingredient_counter = 0
         self.recipes = ''
@@ -91,6 +162,7 @@ class gui(Frame):
         self.ingredient4_entry.delete(0, END)
         self.ingredient5_entry.delete(0, END)
 
-        
+gui.bind('<Return>', gui.get_recipes_on_return)
+    
 gui().mainloop()
 

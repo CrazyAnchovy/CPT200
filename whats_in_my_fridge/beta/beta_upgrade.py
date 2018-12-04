@@ -44,13 +44,11 @@ class gui(Frame):
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
         
     def get_recipes(self):
-        
         recipes = ()
         
         self.information.delete(0, 'end')
         for ingredient in ingredients_list:
             ingredients_list.pop()
-            
         
         ingredient_counter = 0
         ingredient1 = self.ingredient1_entry.get()
@@ -86,16 +84,9 @@ class gui(Frame):
             directions = recipe[2]
             self.information.insert('end', "****")
             self.information.insert('end', name)
-            self.information.insert('end', ingredients)
-            self.information.insert('end', directions)
+#             self.information.insert('end', ingredients)
+#             self.information.insert('end', directions)
             
-        self.ingredient_counter = 0
-        self.recipes = ''
-        for ingredient in ingredients_list:
-            ingredients_list.pop()
-
-    
-    
     def reset(self):
         self.ingredient_counter = 0
         self.recipes = ''
@@ -108,6 +99,8 @@ class gui(Frame):
         self.ingredient4_entry.delete(0, END)
         self.ingredient5_entry.delete(0, END)
 
+    def open_file_from_listbox(self, event):
         
+
 gui().mainloop()
 

@@ -40,10 +40,20 @@ class gui(Frame):
         self.ingredient5_entry = Entry(self)
         self.ingredient5_entry.grid(row=5, column=1)
         
-        self.information=Listbox(self, height=20, width=50)
+        self.information=Listbox(self, selectmode = EXTENDED, height=20, width=75)
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
         
     def get_recipes(self):
+        
+        self.get_recipes.bind('<Return>')
+        
+        recipes = ()
+        
+        self.information.delete(0, 'end')
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+            
+        
         ingredient_counter = 0
         ingredient1 = self.ingredient1_entry.get()
         ingredient2 = self.ingredient2_entry.get()
@@ -73,17 +83,32 @@ class gui(Frame):
             recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5))
         
         for recipe in recipes:
+            name = recipe[0]
+            ingredients = recipe[1]
+            directions = recipe[2]
             self.information.insert('end', "****")
-            recipe = " ".join([x for x in recipe])
-            self.information.insert('end', recipe)
+            self.information.insert('end', name)
+            self.information.insert('end', ingredients)
+            self.information.insert('end', directions)
+            
+        self.ingredient_counter = 0
+        self.recipes = ''
+        for ingredient in ingredients_list:
+            ingredients_list.pop()
+
+    
     
     def reset(self):
-        #the next few lines to be defined as a function for 'reset'    
         self.ingredient_counter = 0
         self.recipes = ''
         for ingredient in ingredients_list:
             ingredients_list.pop()
         self.information.delete(0,END)
+        self.ingredient1_entry.delete(0, END)
+        self.ingredient2_entry.delete(0, END)
+        self.ingredient3_entry.delete(0, END)
+        self.ingredient4_entry.delete(0, END)
+        self.ingredient5_entry.delete(0, END)
 
         
 gui().mainloop()
