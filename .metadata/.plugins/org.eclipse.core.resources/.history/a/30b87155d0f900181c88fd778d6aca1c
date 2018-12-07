@@ -99,8 +99,8 @@ class gui(Frame):
                         
             self.information.insert('end', "****")
             self.information.insert('end', name) #this needs to become clickable            
-            self.information.insert('end', ingredients)
-            self.information.insert('end', directions)
+#             self.information.insert('end', ingredients)
+#             self.information.insert('end', directions)
             
     def reset(self):
         self.ingredient_counter = 0
