@@ -3,7 +3,6 @@
 C:\Users\Bowen\Desktop\coding\cpt200\.metadata\.plugins\org.eclipse.core.resources\.projects\whats_in_my_fridge\com.python.pydev.analysis\v2_indexcache
 scrape_testing.query_testing|1540349682351618000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\query_testing.py
 beta.__init__|1541614676583483000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\__init__.py
-beta.beta_upgrade|1542686256447963000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\beta\beta_upgrade.py
 scrape_testing.__init__|1536869635184438000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\__init__.py
 scrape_testing.list_query|1540349682267598000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\list_query.py
 scrape_testing.practice_db|1536866010608233000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py
@@ -12,47 +11,47 @@ scrape_testing.saved_cleaner|1538175667355425000|C:\Users\Bowen\Desktop\coding\c
 scrape_testing.gui|1541614676502466000|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\gui.py
 -- END DISKCACHE
 -- START DICTIONARY
-14
-12=Recipe.__init__
+12
+11=Recipe.__init__
 1=scrape_testing.query_testing
 4=beta.__init__
-11=Recipe
-5=beta.beta_upgrade
-14=gui.reset
+10=Recipe
+12=gui.__init__
+7=scrape_testing.list_query
+8=scrape_testing.__init__
 3=scrape_testing.practice_db
-7=scrape_testing.cleaner
+9=gui
+6=scrape_testing.cleaner
+5=scrape_testing.saved_cleaner
 2=scrape_testing.gui
-13=gui.__init__
-8=scrape_testing.list_query
-9=scrape_testing.__init__
-10=gui
-6=scrape_testing.saved_cleaner
 -- END DICTIONARY
 -- START TREE 1
-12
-c|8|c!11@c!19@c!27@c!35@c!43@c!51@c!59@c!67@
-con|8|conn!59@conn!51@conn!67@conn!35@conn!43@conn!19@conn!27@conn!11@
+13
+c|7|c!11@c!19@c!27@c!35@c!43@c!51@c!59@
+con|7|conn!51@conn!43@conn!59@conn!35@conn!19@conn!27@conn!11@
 cou|1|count!11@
-dir|2|directions_string!51@directions_string!59@
-gui|3|gui!41@gui!17@gui!33@
-ing|12|ingredient_list!59@ingredient!11@ing_string!75@ingredient_string!51@ingredient_list!75@ingredient_string!59@ingredients_list!43@ingredient_list!67@ingredients!75@ingredient!67@ingredient_list!51@ingredient_list!11@
-lin|9|link_source!51@link_soup!51@link_list!75@link_soup!75@link_soup!59@link_list!59@link_source!75@link_source!59@link_list!51@
-rec|15|Recipe!49@recipe_directions_soup!51@recipes!11@recipe_directions_soup!75@recipe_title!59@recipe_title_string!51@recipe_directions_soup!59@recipe_title!51@recipe!11@recipe_links!75@recipe_title!75@recipe_title_string!59@recipe_links!59@Recipe!57@recipe_links!51@
-ref|2|Refrigerator!49@Refrigerator!57@
+dir|2|directions_string!43@directions_string!51@
+gui|2|gui!17@gui!33@
+ing|11|ing_string!67@ingredient_string!43@ingredient_list!67@ingredient_list!59@ingredient_list!11@ingredient_list!51@ingredient!11@ingredient_string!51@ingredients!67@ingredient!59@ingredient_list!43@
+lin|9|link_source!43@link_soup!43@link_list!67@link_soup!67@link_soup!51@link_list!51@link_source!67@link_source!51@link_list!43@
+nam|0|
+rec|15|Recipe!41@recipe_directions_soup!43@recipes!11@recipe_directions_soup!67@recipe_title!51@recipe_title_string!43@recipe_directions_soup!51@recipe_title!43@recipe!11@recipe_links!67@recipe_title!67@recipe_title_string!51@recipe_links!51@Recipe!49@recipe_links!43@
+ref|2|Refrigerator!41@Refrigerator!49@
 sel|1|selection!27@
-str|5|string_directions!51@string_ingredients!59@string_ingredients!51@string_directions!59@string_thing!75@
-url|2|url_number!59@url_number!51@
+str|5|string_directions!43@string_ingredients!51@string_ingredients!43@string_directions!51@string_thing!67@
+url|2|url_number!51@url_number!43@
 -- END TREE
 -- START TREE 2
-10
-__i|5|__init__!10&18@__init__!10&34@__init__!10&42@__init__!11&58@__init__!11&50@
-dir|2|directions!12&59@directions!12&51@
-ent|3|enter_button!13&43@enter_button!13&35@enter_button!13&19@
-get|3|get_recipes!10&34@get_recipes!10&42@get_recipes!10&18@
-inf|3|information!13&43@information!13&19@information!13&35@
-ing|10|ingredients!12&51@ingredients!12&59@ingredient4_entry!13&43@ingredient2_entry!13&43@ingredient1_entry!13&19@ingredient3_entry!13&43@ingredient1_entry!13&35@ingredient5_entry!13&43@ingredient_counter!14&43@ingredient1_entry!13&43@
-lab|4|label_fake!13&43@label!13&19@label!13&43@label!13&35@
-nam|2|name!12&59@name!12&51@
-rec|1|recipes!14&43@
-res|2|reset_button!13&43@reset!10&42@
+11
+__i|4|__init__!9&18@__init__!9&34@__init__!10&50@__init__!10&42@
+dir|2|directions!11&51@directions!11&43@
+ent|2|enter_button!12&35@enter_button!12&19@
+get|2|get_recipes!9&34@get_recipes!9&18@
+inf|2|information!12&19@information!12&35@
+ing|4|ingredients!11&43@ingredients!11&51@ingredient1_entry!12&19@ingredient1_entry!12&35@
+lab|2|label!12&19@label!12&35@
+nam|2|name!11&51@name!11&43@
+ope|0|
+rec|0|
+res|0|
 -- END TREE

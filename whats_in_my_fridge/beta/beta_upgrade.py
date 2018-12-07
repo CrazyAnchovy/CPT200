@@ -1,13 +1,24 @@
-import sqlite3
+import sqlite3 
 import tkinter
 from tkinter import *
 
+#the following was auto-imported
+# from ctypes.test.test_pickling import name
+# from adodbapi.ado_consts import directions
+#from scrape_testing import ingredients
+
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
-ingredients_list = []
 
-class gui(Frame):
+ingredients_list = []
+recipe_list = []
+name = ''
+ingredients = ''
+directions = ''
+
+class gui(Frame):    
     def __init__(self):
+        """initialize the frame and all components"""
         Frame.__init__(self)
         self.master.geometry("700x400")
         self.master.title('What\'s in my Fridge?')
@@ -42,10 +53,9 @@ class gui(Frame):
         
         self.information=Listbox(self, selectmode = EXTENDED, height=20, width=75)
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
-        
+                
     def get_recipes(self):
-        recipes = ()
-        
+        """called from the enter_button, which was initialized with the frame"""
         self.information.delete(0, 'end')
         for ingredient in ingredients_list:
             ingredients_list.pop()
@@ -79,11 +89,16 @@ class gui(Frame):
             recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5))
         
         for recipe in recipes:
-            name = recipe[0]
-            ingredients = recipe[1]
-            directions = recipe[2]
+            """this loop creates a recipe object from each recipe and inserts the name into the listbox"""
+            
+            recipe_list = list(recipe)
+            
+            name = str(recipe_list[0])
+            ingredients = recipe_list[1]
+            directions =recipe_list[2]
+                        
             self.information.insert('end', "****")
-            self.information.insert('end', name)
+            self.information.insert('end', name) #this needs to become clickable            
 #             self.information.insert('end', ingredients)
 #             self.information.insert('end', directions)
             
@@ -100,7 +115,8 @@ class gui(Frame):
         self.ingredient5_entry.delete(0, END)
 
     def open_file_from_listbox(self, event):
-        
+        pass
+    
 
 gui().mainloop()
 
