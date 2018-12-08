@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pydev-testrun version="1.0"?><pydev-testsuite>
+<summary errors="4" failures="0" finished="true" name="Test Run: 4" tests="0" total_time="Finished in: 0.00 secs."/>
+<test location="C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/cleaner.py" status="error" test="cleaner" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Bowen\.p2\pool\plugins\org.python.pydev_5.6.0.201703221358\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\cleaner.py", line 24, in <module>
+    )""")
+sqlite3.OperationalError: table recipe_table already exists
+ERROR: Module: cleaner could not be imported (file: C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/cleaner.py).
+]]></stderr>
+</test>
+<test location="C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/practice_db.py" status="error" test="practice_db" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Bowen\.p2\pool\plugins\org.python.pydev_5.6.0.201703221358\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py", line 15, in <module>
+    c.execute("SELECT * FROM practice WHERE name = 'food'")
+sqlite3.OperationalError: no such table: practice
+ERROR: Module: practice_db could not be imported (file: C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/practice_db.py).
+]]></stderr>
+</test>
+<test location="C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/query_testing.py" status="error" test="query_testing" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Bowen\.p2\pool\plugins\org.python.pydev_5.6.0.201703221358\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\query_testing.py", line 10, in <module>
+    chicken_getter = c.execute("SELECT * FROM 'recipe_table' WHERE 'ingredients' like 'ingredient_string' ")
+sqlite3.OperationalError: no such table: recipe_table
+ERROR: Module: query_testing could not be imported (file: C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/query_testing.py).
+]]></stderr>
+</test>
+<test location="C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/saved_cleaner.py" status="error" test="saved_cleaner" time="0">
+<stdout/>
+<stderr><![CDATA[Traceback (most recent call last):
+  File "C:\Users\Bowen\.p2\pool\plugins\org.python.pydev_5.6.0.201703221358\pysrc\_pydev_runfiles\pydev_runfiles.py", line 468, in __get_module_from_str
+    mod = __import__(modname)
+  File "C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\saved_cleaner.py", line 27, in <module>
+    with open ('recipe_link_file.txt') as link_file:
+FileNotFoundError: [Errno 2] No such file or directory: 'recipe_link_file.txt'
+ERROR: Module: saved_cleaner could not be imported (file: C:/Users/Bowen/Desktop/coding/cpt200/whats_in_my_fridge/scrape_testing/saved_cleaner.py).
+]]></stderr>
+</test>
+<launch mode="run">
+<launch_memento><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration local="true" path="whats_in_my_fridge scrape_testing"/>
+]]></launch_memento>
+</launch>
+</pydev-testsuite>

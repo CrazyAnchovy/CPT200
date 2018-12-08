@@ -2,11 +2,6 @@ import sqlite3
 import tkinter
 from tkinter import *
 
-#the following was auto-imported
-# from ctypes.test.test_pickling import name
-# from adodbapi.ado_consts import directions
-#from scrape_testing import ingredients
-
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
 
@@ -115,6 +110,7 @@ class gui(Frame):
         self.ingredient5_entry.delete(0, END)
 
     def open_file_from_listbox(self, event):
+        #this function will open highlighted recipe text into a printable txt file
         pass
     
 

@@ -1,0 +1,14 @@
+import sqlite3
+
+conn = sqlite3.connect("recipe_db.db")
+c = conn.cursor()
+
+word_list = []
+word = ''
+
+while word != 'NONE':
+    word = input('what ingredient would you like to search for?')
+    word_list.append(word)
+    
+for word in word_list:
+    print(word)
