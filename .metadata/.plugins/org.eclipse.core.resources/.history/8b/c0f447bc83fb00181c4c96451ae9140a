@@ -113,21 +113,19 @@ class gui(Frame):
         
         for recipe in recipes:
             #make recipe counter to include a minor amount of recipes in the 'sponsored' recipes (use mod)
-            name = recipe[0]
-            ingredients = recipe[1]
-            directions = recipe[2]
+            recipe = recipe(recipe[0], recipe[1], recipe[2])
             
-
+            print(recipe.name)
             
 #             the_recipe.append(str(name))   
 #             the_recipe.append(str(ingredients))  
 #             the_recipe.append(str(directions))
 #             
 #             recipe_string = ''.join(the_recipe) 
-
-            self.information.insert('end', name)
-            self.information.insert('end', ingredients,)
-            self.information.insert('end', directions,)
+            self.information.insert(recipe[0, 1, 2])
+#             self.information.insert('end', name)
+#             self.information.insert('end', ingredients,)
+#             self.information.insert('end', directions,)
 
             self.information.insert('end', "--------------------------------------------------------------------------------------------------")
             recipe_counter += 1
@@ -156,8 +154,9 @@ class gui(Frame):
     
     def open_file_from_listbox(self):
         #this function will open highlighted recipe text into a printable txt file
-        recipe_card = self.information.get('active')
-        print(recipe_card)
+        recipe_card = self.information.curselection()
+        for component in recipe_card:
+            pass
         #recipe_card = self.information.get(ANCHOR)
         with open('recipe_file.txt', 'w') as recipe_file:
             recipe_file.write(str(recipe_card))

@@ -156,8 +156,9 @@ class gui(Frame):
     
     def open_file_from_listbox(self):
         #this function will open highlighted recipe text into a printable txt file
-        recipe_card = self.information.get('active')
-        print(recipe_card)
+        recipe_card = self.information.get('active', 2)
+        for component in recipe_card:
+            print(component)
         #recipe_card = self.information.get(ANCHOR)
         with open('recipe_file.txt', 'w') as recipe_file:
             recipe_file.write(str(recipe_card))

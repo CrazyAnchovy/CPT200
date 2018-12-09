@@ -13,17 +13,10 @@ conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
 ingredients_list = []
 
+
 class gui(Frame):
-    
-    class recipe():
-        def __init__(self):
-            name = recipe.name
-            ingredients = recipe.ingredients
-            directions = recipe.directions
-    
-            
     def __init__(self):
-        """initiate the UI"""
+
         Frame.__init__(self)
         self.master.geometry("875x475")
         
@@ -113,18 +106,19 @@ class gui(Frame):
         
         for recipe in recipes:
             #make recipe counter to include a minor amount of recipes in the 'sponsored' recipes (use mod)
+            
             name = recipe[0]
             ingredients = recipe[1]
             directions = recipe[2]
             
-
+            
             
 #             the_recipe.append(str(name))   
 #             the_recipe.append(str(ingredients))  
 #             the_recipe.append(str(directions))
 #             
 #             recipe_string = ''.join(the_recipe) 
-
+            
             self.information.insert('end', name)
             self.information.insert('end', ingredients,)
             self.information.insert('end', directions,)
@@ -156,8 +150,9 @@ class gui(Frame):
     
     def open_file_from_listbox(self):
         #this function will open highlighted recipe text into a printable txt file
-        recipe_card = self.information.get('active')
-        print(recipe_card)
+        recipe_card = self.information.curselection()
+        for component in recipe_card:
+            print(component)
         #recipe_card = self.information.get(ANCHOR)
         with open('recipe_file.txt', 'w') as recipe_file:
             recipe_file.write(str(recipe_card))
