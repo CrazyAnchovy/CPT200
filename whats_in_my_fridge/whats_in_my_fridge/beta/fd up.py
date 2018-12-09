@@ -1,16 +1,22 @@
+#sponsored recipe selection (skip the first several, to not appear to have dupes)
+#work on clickable-ness  (highlightable-ness)
+#scrollbars
+#add reset to sponsor listboxssssssssszx
+
 import sqlite3
 import tkinter as tk
 from tkinter import *
 import tkinter as ttk
+from _operator import mul
 
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
 ingredients_list = []
 
+
 class gui(Frame):
     def __init__(self):
-        
-        
+
         Frame.__init__(self)
         self.master.geometry("875x475")
         
@@ -36,6 +42,9 @@ class gui(Frame):
         self.reset_button = Button(self, text='Reset',bg="white", fg="Red", command = self.reset)
         self.reset_button.grid(row=7, column=1)
         
+        self.recipe_card_button = Button(self, text='Open Recipe', bg="white", fg="black", command = self.open_file_from_listbox)
+        self.recipe_card_button.grid(row=7, column=2)
+        
         self.ingredient1_entry = Entry(self,bg="Grey", fg="white")
         self.ingredient1_entry.grid(row=1, column=1)
         
@@ -57,12 +66,10 @@ class gui(Frame):
         self.Sponsors=Listbox(self, selectmode = EXTENDED, height=5, width=75)
         self.Sponsors.grid(row=7, column=3, columnspan=7, rowspan=3)
 
-         
-        
     def get_recipes(self):
-
-        
+        recipe_counter = 0
         recipes = ()
+        the_recipe = []
         
         self.information.delete(0, 'end')
         for ingredient in ingredients_list:
@@ -98,40 +105,54 @@ class gui(Frame):
             recipes = c.execute("SELECT DISTINCT name, ingredients, directions FROM 'recipe_table' WHERE ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%' and ingredients LIKE '%{}%'".format(ingredient1, ingredient2, ingredient3, ingredient4, ingredient5))
         
         for recipe in recipes:
-            #make      
+            #make recipe counter to include a minor amount of recipes in the 'sponsored' recipes (use mod)
+            
             name = recipe[0]
             ingredients = recipe[1]
-            directions = recipe[2]
-            self.information.insert('end', name,)
+            directions = recipe[2]    
+            
+#             the_recipe.append(str(name))   
+#             the_recipe.append(str(ingredients))  
+#             the_recipe.append(str(directions))
+#             
+#             recipe_string = ''.join(the_recipe) 
+            
+            self.information.insert('end', name)
+            self.information.insert('end', ingredients,)
+            self.information.insert('end', directions,)
+
             self.information.insert('end', "--------------------------------------------------------------------------------------------------")
-            print(type(recipes))
+            recipe_counter += 1
             
-            
+            if recipe_counter%10 == 0:
+                self.Sponsors.insert('end', name)
+                
+                
         self.ingredient_counter = 0
         self.recipes = ''
         for ingredient in ingredients_list:
             ingredients_list.pop()
 
-        
-
-    
-    
     def reset(self):
         self.ingredient_counter = 0
         self.recipes = ''
         for ingredient in ingredients_list:
             ingredients_list.pop()
         self.information.delete(0,END)
+        self.Sponsors.delete(0, END)
         self.ingredient1_entry.delete(0, END)
         self.ingredient2_entry.delete(0, END)
         self.ingredient3_entry.delete(0, END)
         self.ingredient4_entry.delete(0, END)
         self.ingredient5_entry.delete(0, END)
-
-       
+    
+    def open_file_from_listbox(self):
+        #this function will open highlighted recipe text into a printable txt file
+        recipe_card = self.information.get('active')
+        with open('recipe_file.txt', 'w') as recipe_file:
+            recipe_file.write(str(recipe_card))
+        
+    
       
-        
-
-        
 gui().mainloop()
 

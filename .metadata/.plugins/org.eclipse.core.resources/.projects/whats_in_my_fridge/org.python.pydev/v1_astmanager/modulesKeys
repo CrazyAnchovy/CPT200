@@ -8,3 +8,12 @@ scrape_testing.list_query|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridg
 scrape_testing.practice_db|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\practice_db.py
 scrape_testing.query_testing|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\query_testing.py
 scrape_testing.saved_cleaner|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\scrape_testing\saved_cleaner.py
+whats_in_my_fridge.beta.__init__|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\beta\__init__.py
+whats_in_my_fridge.beta.beta_upgrade|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\beta\beta_upgrade.py
+whats_in_my_fridge.scrape_testing.__init__|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\__init__.py
+whats_in_my_fridge.scrape_testing.cleaner|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\cleaner.py
+whats_in_my_fridge.scrape_testing.gui|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\gui.py
+whats_in_my_fridge.scrape_testing.list_query|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\list_query.py
+whats_in_my_fridge.scrape_testing.practice_db|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\practice_db.py
+whats_in_my_fridge.scrape_testing.query_testing|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\query_testing.py
+whats_in_my_fridge.scrape_testing.saved_cleaner|C:\Users\Bowen\Desktop\coding\cpt200\whats_in_my_fridge\whats_in_my_fridge\scrape_testing\saved_cleaner.py
