@@ -8,6 +8,7 @@ import tkinter as tk
 from tkinter import *
 import tkinter as ttk
 from _operator import mul
+import os
 
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
@@ -159,11 +160,8 @@ class gui(Frame):
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
         with open('recipe_file.txt', 'w') as recipe_file:
             for entry in recipes:
-                for letter in entry:
-                    if letter == '\u2044':
-                        print('damnit')
                 recipe_file.write(entry)
-        open('recipe_file.txt')
+        os.system('recipe_file.txt')
                 
         
         

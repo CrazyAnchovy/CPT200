@@ -159,10 +159,7 @@ class gui(Frame):
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
         with open('recipe_file.txt', 'w') as recipe_file:
             for entry in recipes:
-                for letter in entry:
-                    if letter == '\u2044':
-                        print('damnit')
-                recipe_file.write(entry)
+                recipe_file.write(str(entry.encode('utf8')))
         open('recipe_file.txt')
                 
         

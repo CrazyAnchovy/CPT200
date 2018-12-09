@@ -160,8 +160,8 @@ class gui(Frame):
         with open('recipe_file.txt', 'w') as recipe_file:
             for entry in recipes:
                 for letter in entry:
-                    if letter == '\u2044':
-                        print('damnit')
+                    if letter == 'u2044':
+                        letter.replace('/')
                 recipe_file.write(entry)
         open('recipe_file.txt')
                 

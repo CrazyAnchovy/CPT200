@@ -161,7 +161,7 @@ class gui(Frame):
             for entry in recipes:
                 for letter in entry:
                     if letter == '\u2044':
-                        print('damnit')
+                        letter.replace('/')
                 recipe_file.write(entry)
         open('recipe_file.txt')
                 
