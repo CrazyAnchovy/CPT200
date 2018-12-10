@@ -159,8 +159,8 @@ class gui(Frame):
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
         with open('recipe_file.txt', 'w', encoding='utf-8') as recipe_file:
             for entry in recipes:
-                recipe_file.write(entry + '\n')
-                recipe_file.write('***********************' + '\n')
+                recipe_file.write(entry)
+                recipe_file.write('***********************\n')
                 
 gui().mainloop()
 

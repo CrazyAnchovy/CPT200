@@ -157,10 +157,14 @@ class gui(Frame):
     def open_file_from_listbox(self):
         #this function will open highlighted recipe text into a printable txt file
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
-        with open('recipe_file.txt', 'w', encoding='utf-8') as recipe_file:
+        with open('recipe_file.txt', 'w') as recipe_file:
             for entry in recipes:
-                recipe_file.write(entry + '\n')
-                recipe_file.write('***********************' + '\n')
+                print(entry)
+                for letter in entry:
+                    if letter == '\u2044':
+                        print('damnit')
+                        print(letter)
+                recipe_file.write(entry.encode("iso-8859-1", "replace"))
                 
 gui().mainloop()
 
