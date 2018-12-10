@@ -1,0 +1,34 @@
+CHANGELOG
+
+For full detail of events, see the following link:
+https://github.com/CrazyAnchovy/CPT200/commits/master
+
+9.28.2018 
+Database is built. Otherwise no front or back end yet
+
+10.13.2018
+Basic front end is built, basic back end has the ability to query for one ingredient.
+
+11.7.2018
+Several updates to include adding up to 5 ingredients, and the algorithm to handle the querying
+
+11.9.2018
+Changes to the way the backend handles input. Creates flow, so the user doesn't have to restart the program to query more.
+
+11.16.2018
+Working out bugs from 11.9.2018 changes
+
+12.3.2018
+Begin work on selecting a recipe and getting it to open in a printable file.
+
+12.6.2018
+Minor bug fixes
+
+12.7.2018
+Notes commented into the code about algorithmic changes needed.
+
+12.8.2018
+Officially created function to open recipes in .txt
+
+12.9.2018
+Cleanup, comments, getting ready for presentation
