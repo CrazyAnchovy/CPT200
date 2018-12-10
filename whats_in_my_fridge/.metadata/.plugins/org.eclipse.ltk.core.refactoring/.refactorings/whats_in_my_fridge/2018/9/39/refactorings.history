@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;whats_in_my_fridge/scrape_testing/recipe_db.db&apos; to &apos;1-recipe_db.db&apos;" description="Rename resource &apos;recipe_db.db&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="scrape_testing/recipe_db.db" name="1-recipe_db.db" stamp="1537988079006" updateReferences="true"/>
-</session>
