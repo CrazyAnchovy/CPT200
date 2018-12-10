@@ -3,7 +3,6 @@ import tkinter as tk
 from tkinter import *
 import tkinter as ttk
 from _operator import mul
-import os
 
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
@@ -162,7 +161,6 @@ class gui(Frame):
             for entry in recipes:
                 recipe_file.write(entry + '\n')
                 recipe_file.write('***********************' + '\n')
-            os.startfile('recipe_file.txt')
                 
 gui().mainloop()
 

@@ -162,7 +162,7 @@ class gui(Frame):
             for entry in recipes:
                 recipe_file.write(entry + '\n')
                 recipe_file.write('***********************' + '\n')
-            os.startfile('recipe_file.txt')
+            os.startfile(recipe_file)
                 
 gui().mainloop()
 
