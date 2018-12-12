@@ -46,10 +46,10 @@ class gui(Frame):
         self.enter_button.grid(row=6, column=1)
         
         self.reset_button = Button(self, text='Reset',bg="white", fg="Red", command = self.reset)
-        self.reset_button.grid(row=8, column=1)
+        self.reset_button.grid(row=7, column=1)
         
         self.recipe_card_button = Button(self, text='Open Recipe', bg="white", fg="black", command = self.open_file_from_listbox)
-        self.recipe_card_button.grid(row=7, column=1)
+        self.recipe_card_button.grid(row=7, column=2)
         
         #install entry fields
         self.ingredient1_entry = Entry(self,bg="Grey", fg="white")
@@ -125,19 +125,16 @@ class gui(Frame):
             directions = recipe[2]
 
             self.information.insert('end', name)
-            self.information.insert('end', ingredients)
-            self.information.insert('end', directions)
+            self.information.insert('end', ingredients,)
+            self.information.insert('end', directions,)
 
             self.information.insert('end', "--------------------------------------------------------------------------------------------------")
             recipe_counter += 1
             
             #the following inserts recipes into the 'sponsored' box
             if recipe_counter%10 == 0:
-                self.Sponsors.insert('end', "------------------------------Sponsored Recipe----------------------------------------------------")
                 self.Sponsors.insert('end', name)
-                self.Sponsors.insert('end', ingredients)
-                self.Sponsors.insert('end', directions)
-         
+                
         #clear out counters and lists to prevent crash if new query is made before reset happens
         self.ingredient_counter = 0
         self.recipes = ''
@@ -161,14 +158,15 @@ class gui(Frame):
     def open_file_from_listbox(self):
         #this function will open highlighted recipe text into a printable txt file
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
-        sponsored_recipes = [self.Sponsors.get(idx) for idx in self.Sponsors.curselection()]
+        sponsored_recipes = [self.Sponsors.get(idx) for idx in self.information.curselection()]
         with open('recipe_file.txt', 'w', encoding='utf-8') as recipe_file:
             for entry in sponsored_recipes:
                 recipe_file.write(entry + '\n')
                 recipe_file.write('***********************' + '\n')
             for entry in recipes:
                 recipe_file.write(entry + '\n')
-                recipe_file.write('***********************' + '\n')               
+                recipe_file.write('***********************' + '\n')
+                
             os.startfile('recipe_file.txt')
                 
 gui().mainloop()

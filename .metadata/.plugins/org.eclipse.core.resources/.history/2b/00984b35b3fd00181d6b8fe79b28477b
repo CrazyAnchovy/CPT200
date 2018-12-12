@@ -137,7 +137,9 @@ class gui(Frame):
                 self.Sponsors.insert('end', name)
                 self.Sponsors.insert('end', ingredients)
                 self.Sponsors.insert('end', directions)
-         
+                self.Sponsors.insert('end', "--------------------------------------------------------------------------------------------------")
+
+                
         #clear out counters and lists to prevent crash if new query is made before reset happens
         self.ingredient_counter = 0
         self.recipes = ''
@@ -168,7 +170,8 @@ class gui(Frame):
                 recipe_file.write('***********************' + '\n')
             for entry in recipes:
                 recipe_file.write(entry + '\n')
-                recipe_file.write('***********************' + '\n')               
+                recipe_file.write('***********************' + '\n')
+                
             os.startfile('recipe_file.txt')
                 
 gui().mainloop()

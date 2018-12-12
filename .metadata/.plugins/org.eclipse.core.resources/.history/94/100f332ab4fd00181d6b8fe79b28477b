@@ -67,7 +67,8 @@ class gui(Frame):
         self.ingredient5_entry = Entry(self,bg="Grey", fg="white")
         self.ingredient5_entry.grid(row=5, column=1)
         
-        #install listbox fields
+        #install listbox fields with scrollbars
+        scrollbar = Scrollbar(Frame, orient = VERTICAL)
         self.information=Listbox(self, selectmode = EXTENDED, height=20, width=75)
         self.information.grid(row=1, column=5, columnspan=1, rowspan=5)
 
@@ -137,7 +138,9 @@ class gui(Frame):
                 self.Sponsors.insert('end', name)
                 self.Sponsors.insert('end', ingredients)
                 self.Sponsors.insert('end', directions)
-         
+                self.Sponsors.insert('end', "--------------------------------------------------------------------------------------------------")
+
+                
         #clear out counters and lists to prevent crash if new query is made before reset happens
         self.ingredient_counter = 0
         self.recipes = ''
@@ -168,7 +171,8 @@ class gui(Frame):
                 recipe_file.write('***********************' + '\n')
             for entry in recipes:
                 recipe_file.write(entry + '\n')
-                recipe_file.write('***********************' + '\n')               
+                recipe_file.write('***********************' + '\n')
+                
             os.startfile('recipe_file.txt')
                 
 gui().mainloop()
