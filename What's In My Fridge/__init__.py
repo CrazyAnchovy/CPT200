@@ -4,10 +4,13 @@ from tkinter import *
 import tkinter as ttk
 from _operator import mul
 import os
+import webbrowser
+
 
 conn = sqlite3.connect("recipe_db.db")
 c = conn.cursor()
 ingredients_list = []
+url = "https://github.com/CrazyAnchovy/CPT200/blob/master/README.md"
 
 class gui(Frame):
     """define the class for the gui"""
@@ -21,34 +24,35 @@ class gui(Frame):
     def __init__(self):
         """initiate the gui class"""
         Frame.__init__(self)
-        self.master.geometry("800x475")
+        self.master.geometry("800x550")
+
+        self.master.title('What\'s in my Fridge?')
         
+        self.grid() #define what method we are using to organize
+
         #install the background photo
         # photo=PhotoImage(file="programbackground.gif")
         # label = Label(self,image = photo)
         # label.image = photo
         # label.grid(row=0,column=0,columnspan=100,rowspan=100)
-
-        self.master.title('What\'s in my Fridge?')
-        
-        self.grid() #define what method we are using to organize
         
         #install labels
-        # self.label_fake = Label(self, bg="White", fg="Black" , text='Sponsored Recipes:')
-        # self.label_fake.grid(row = 9, column = 1)
-        
         self.label = Label(self, bg="white", fg="black", text='Enter up to five ingredients below')
         self.label.grid(row = 0, column = 1, padx=10, pady=10)
         
         #install buttons
         self.enter_button = Button(self, text='Get Recipes!',bg="white", fg="black", command = self.get_recipes)
-        self.enter_button.grid(row=1, column=6, padx=10)
-        
-        self.reset_button = Button(self, text='Reset',bg="white", fg="Red", command = self.reset)
-        self.reset_button.grid(row=3, column=6, padx=10)
-        
+        self.enter_button.grid(row=6, column=1, padx=10, pady=10)
+             
         self.recipe_card_button = Button(self, text='Open Recipe', bg="white", fg="black", command = self.open_file_from_listbox)
-        self.recipe_card_button.grid(row=5, column=6, padx=10)
+        self.recipe_card_button.grid(row=7, column=1, padx=10, pady=10)
+
+        self.reset_button = Button(self, text='Reset',bg="white", fg="Red", command = self.reset)
+        self.reset_button.grid(row=8, column=1, padx=10, pady=10)
+
+        self.mitch_button = Button(self, text='About',bg="white", fg="Red", command = self.learn_about_mitch)
+        self.mitch_button.grid(row=9, column = 1)
+
         
         #install entry fields
         self.ingredient1_entry = Entry(self,bg="Grey", fg="white")
@@ -67,12 +71,10 @@ class gui(Frame):
         self.ingredient5_entry.grid(row=5, column=1, padx=10)
         
         #install listbox fields
-        self.information=Listbox(self, selectmode = EXTENDED, height=20, width=75)
-        self.information.grid(row=1, column=5, columnspan=1, rowspan=5, padx=10)
+        self.information=Listbox(self, selectmode = EXTENDED, height=27, width=75)
+        self.information.grid(row=1, column=5, columnspan=1, rowspan=8, padx=10)
 
-        # self.Sponsors=Listbox(self, selectmode = EXTENDED, height=5, width=75)
-        # self.Sponsors.grid(row=7, column=3, columnspan=7, rowspan=3)
-
+    #callback functions
     def get_recipes(self):
         """this function is the callback for the get recipes button. it is the
            database query for what we want"""          
@@ -129,13 +131,6 @@ class gui(Frame):
 
             self.information.insert('end', "--------------------------------------------------------------------------------------------------")
             recipe_counter += 1
-            
-            #the following inserts recipes into the 'sponsored' box
-            # if recipe_counter%10 == 0:
-            #     self.Sponsors.insert('end', "------------------------------Sponsored Recipe----------------------------------------------------")
-            #     self.Sponsors.insert('end', name)
-            #     self.Sponsors.insert('end', ingredients)
-            #     self.Sponsors.insert('end', directions)
          
         #clear out counters and lists to prevent crash if new query is made before reset happens
         self.ingredient_counter = 0
@@ -162,13 +157,13 @@ class gui(Frame):
         recipes = [self.information.get(idx) for idx in self.information.curselection()]
         # sponsored_recipes = [self.Sponsors.get(idx) for idx in self.Sponsors.curselection()]
         with open('recipe_file.txt', 'w', encoding='utf-8') as recipe_file:
-            # for entry in sponsored_recipes:
-            #     recipe_file.write(entry + '\n')
-            #     recipe_file.write('***********************' + '\n')
             for entry in recipes:
                 recipe_file.write(entry + '\n')
                 recipe_file.write('***********************' + '\n')               
             os.startfile('recipe_file.txt')
+
+    def learn_about_mitch(self):
+        webbrowser.open(url)
                 
 gui().mainloop()
 #run the gui, which calls all of the features
