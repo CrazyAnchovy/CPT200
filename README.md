@@ -1,25 +1,17 @@
-#to do for cpt200
-
-btw guys i don't know markdown lol
-
-new update
-
-
-assigned team
-	create team roster
-		jeff schultze - project manager
-		mat dennison - programmer
-		mitch bowen - programmer
-		
-	create connections
-		connections created
-		
-	create and assign rolls
-		see roster
-	
+# What's In My Fridge
+by the CrazyAnchovy
+Mitch Bowen<br/>
+https://www.linkedin.com/in/CrazyAnchovy<br/>
 
 
-outline
+This is a simple app to help discover new recipes which can be made with ingredients you already have. Enter a few ingredients into the entry fields, hit 'Get Recipes', and you will see the listbox populate with recipes.
 
-hammer shit out
+If you don't see any recipes:
+ - You may have entered a combination of ingredients that don't appear within the database of over 20,000 recipes. Or you may have a 	      misspelling. "Pencils, love, table" will yield no results as will "egs, bacn, tost." 
+ - You may have entered some ingredients that aren't being found together. I bet "sardines, chocolate, soy, milk" will yield no results.
+ 
+When the recipes populate:
+ Click the top line of the recipe and drag to the bottom. The entire recipe will be selected. Then click the 'Open Recipe' button
+ 
+This is still a work in progress.
 
