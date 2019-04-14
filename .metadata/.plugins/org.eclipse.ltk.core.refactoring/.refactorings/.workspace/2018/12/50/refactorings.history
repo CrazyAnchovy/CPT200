@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;whats_in_my_fridge&apos;" deleteContents="false" description="Delete resource &apos;whats_in_my_fridge&apos;" element1="/whats_in_my_fridge" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1544414338076"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;whats_in_my_fridge&apos;" deleteContents="false" description="Delete resource &apos;whats_in_my_fridge&apos;" element1="/whats_in_my_fridge" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1544414338076"/>&#x0A;<refactoring comment="Delete resource &apos;What&apos;s In My Fridge&apos;" deleteContents="false" description="Delete resource &apos;What&apos;s In My Fridge&apos;" element1="/What&apos;s In My Fridge" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1544658428437"/>
 </session>
