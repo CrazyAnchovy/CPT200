@@ -1,7 +1,7 @@
 # What's In My Fridge
 by the CrazyAnchovy
-  Mitch Bowen
-  LinkedIn.com/in/CrazyAnchovy
+Mitch Bowen<br/>
+LinkedIn.com/in/CrazyAnchovy<br/>
 
 
 This is a simple app to help discover new recipes which can be made with ingredients you already have. Enter a few ingredients into the entry fields, hit 'Get Recipes', and you will see the listbox populate with recipes.
